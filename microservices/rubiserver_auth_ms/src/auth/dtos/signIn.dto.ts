@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEmail, IsNotEmpty, MaxLength } from "class-validator";
 
-export default class LoginBodyDTO {
+export default class SignInDTO {
   @ApiProperty({
     description: "User's email that has created his account",
     example: "user@corp.com",

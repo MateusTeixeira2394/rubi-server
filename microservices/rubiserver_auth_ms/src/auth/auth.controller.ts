@@ -5,18 +5,18 @@ import {
   ApiOperation,
   ApiTags,
 } from "@nestjs/swagger";
-import LoginBodyDTO from "./dtos/loginBody.dto";
-import LoginResponseDTO from "./dtos/loginResponse.dto";
-import LoginBadRequestResponseDto from "./dtos/loginBadRequestResponse.dto";
+import SignInDTO from "./dtos/signIn.dto";
+import SignInResponseDTO from "./dtos/signInResponse.dto";
+import SignInBadRequestResponseDto from "./dtos/signInBadRequestResponse.dto";
 
 @ApiTags("auth")
 @Controller("auth")
 export class AuthController {
-  @Post("login")
+  @Post("signin")
   @ApiOperation({ summary: "It authenticates the users" })
-  @ApiOkResponse({ type: LoginResponseDTO })
-  @ApiBadRequestResponse({ type: LoginBadRequestResponseDto })
-  public async login(@Body() body: LoginBodyDTO): Promise<LoginResponseDTO> {
+  @ApiOkResponse({ type: SignInResponseDTO })
+  @ApiBadRequestResponse({ type: SignInBadRequestResponseDto })
+  public async login(@Body() body: SignInDTO): Promise<SignInResponseDTO> {
     console.log(body);
     return {
       message: "User successfully logged",

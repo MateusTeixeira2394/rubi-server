@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export default class LoginResponseDTO {
+export default class SignInResponseDTO {
   @ApiProperty({
     example: "user successfully logged",
     description: "Message response",
