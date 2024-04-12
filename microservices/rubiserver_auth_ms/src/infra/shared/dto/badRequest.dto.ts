@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export default class BadRequestDTO {
+export class BadRequestDTO {
   @ApiProperty({
     description: "It is an array of error messages",
     example: [

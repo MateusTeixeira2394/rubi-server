@@ -2,7 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 
 export default class SignInResponseDTO {
   @ApiProperty({
-    example: "user successfully logged",
+    example: "User has successfully signed in",
     description: "Message response",
   })
   readonly message: string;
