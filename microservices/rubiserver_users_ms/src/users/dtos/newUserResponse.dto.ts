@@ -1,21 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import User from '../models/user.model';
+import { UserDto } from './user.dto';
+import { ResponseDTO } from 'src/infra/shared/dtos/response.dto';
 
-export class NewUserResponseDTO {
-  @ApiProperty({
-    example: 'User has successfully created.',
-    description: 'Message response',
-  })
-  readonly message: string;
-
-  @ApiProperty({
-    example: 200,
-    description: 'HTTP Status Code',
-  })
-  readonly statusCode: number;
-
+export class NewUserResponseDTO extends ResponseDTO {
   @ApiProperty({
     description: 'The created user data',
   })
-  readonly user: User;
+  readonly user: UserDto;
 }
